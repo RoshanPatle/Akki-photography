@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #050508;
+    color: #f0ede8;
+    font-family: 'Syne', sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(201, 169, 110, 0.3);
+    color: #e8c98a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050508;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c9a96e;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-hover:hover {
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .glass-gold {
+    background: rgba(201, 169, 110, 0.08);
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-dark {
+    background: rgba(5, 5, 8, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .btn-gold {
+    @apply px-8 py-3 text-xs tracking-widest uppercase font-semibold font-sans transition-all duration-300;
+    background: #c9a96e;
+    color: #050508;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-gold:hover {
+    background: #e8c98a;
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-white {
+    @apply px-8 py-3 text-xs tracking-widest uppercase font-semibold font-sans transition-all duration-300;
+    background: transparent;
+    color: #f0ede8;
+    border: 1px solid rgba(240, 237, 232, 0.2);
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+  }
+  .btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(240, 237, 232, 0.4);
+  }
+
+  .btn-outline-gold {
+    @apply px-6 py-2 text-xs tracking-widest uppercase font-semibold font-sans transition-all duration-300;
+    background: transparent;
+    color: #c9a96e;
+    border: 1px solid rgba(201, 169, 110, 0.5);
+    cursor: pointer;
+  }
+  .btn-outline-gold:hover {
+    background: rgba(201, 169, 110, 0.08);
+    border-color: #c9a96e;
+  }
+
+  .section-label {
+    @apply text-xs tracking-[0.25em] uppercase mb-3;
+    color: #c9a96e;
+    font-family: 'Syne', sans-serif;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: #f0ede8;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: #c9a96e;
+  }
+
+  .gold-line {
+    width: 60px;
+    height: 1px;
+    background: #c9a96e;
+    margin: 1.5rem 0;
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .text-gold {
+    color: #c9a96e;
+  }
+
+  .text-gold-light {
+    color: #e8c98a;
+  }
+
+  .text-muted {
+    color: #7a7880;
+  }
+
+  .text-soft {
+    color: rgba(240, 237, 232, 0.65);
+  }
+
+  .bg-dark-1 { background-color: #050508; }
+  .bg-dark-2 { background-color: #0a0a10; }
+  .bg-dark-3 { background-color: #0f0f18; }
+}
