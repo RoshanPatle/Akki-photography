@@ -17,7 +17,7 @@ export default function About() {
           <FadeSection>
             <div className="relative max-w-md mx-auto lg:mx-0">
               <img
-                src="./public/akii_bisen1-20260416-0001.jpg.jpeg"
+                src="/akii_bisen1-20260416-0001.jpg.jpeg"
                 alt="Studio"
                 className="object-cover w-full"
                 style={{ aspectRatio: '3/4' }}
@@ -25,7 +25,7 @@ export default function About() {
               />
               {/* Accent image */}
               <img
-                src="./public/akii_bisen1-20260416-0001.jpg.jpeg"
+                src="/akii_bisen1-20260416-0001.jpg.jpeg"
                 alt="Equipment"
                 loading="lazy"
                 className="absolute -bottom-8 -right-8 w-[45%] object-cover border-4 border-dark-3"
